@@ -4,7 +4,7 @@ from django.contrib.auth.models import Group
 
 
 class User(AbstractUser):
-    profile = models.ManyToManyField(
+    profiles = models.ManyToManyField(
         "user.Profile", verbose_name="Níveis")
 
 
