@@ -1,5 +1,5 @@
 from rest_framework import viewsets
-from .models import User, ProfilePermission
+from .models import User, Profile
 from .serializers import UserSerializer, ProfileSerializer
 from .permissions import UserPermission
 
@@ -11,6 +11,6 @@ class UserViewSet(viewsets.ModelViewSet):
 
 
 class ProfileViewSet(viewsets.ModelViewSet):
-    queryset = ProfilePermission.objects.all()
+    queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
     permission_classes = [UserPermission]
